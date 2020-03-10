@@ -7,7 +7,7 @@ public class TestCodingSwitch {
     public static void main(String[] args) {
         String testString = "你好啊是啊";
         try {
-            //编码
+            //编码 //查看分支树
             byte[] utf = testString.getBytes("UTF-8");
             byte[] gbk = testString.getBytes("GBK");
             byte[] iso = testString.getBytes("ISO-8859-1");
