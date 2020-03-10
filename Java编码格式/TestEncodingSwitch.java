@@ -1,3 +1,4 @@
+
 package com.xuhj.File;
 
 import java.io.UnsupportedEncodingException;
@@ -6,7 +7,8 @@ import java.util.Arrays;
 public class TestCodingSwitch {
     public static void main(String[] args) {
         String testString = "你好啊是啊";
-        try {
+ 	//测试不同点       
+		try {
             //编码
             byte[] utf = testString.getBytes("UTF-8");
             byte[] gbk = testString.getBytes("GBK");
