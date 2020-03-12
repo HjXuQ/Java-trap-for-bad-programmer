@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 public class TestCodingSwitch {
+	//修改提交语句
     public static void main(String[] args) {
         String testString = "你好啊是啊";
         try {
