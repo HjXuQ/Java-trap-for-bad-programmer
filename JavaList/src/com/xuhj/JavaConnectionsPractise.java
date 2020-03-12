@@ -22,8 +22,14 @@ public class JavaConnectionsPractise {
         /**
          * Collection接口 双列集合
          * ｜----List接口：元素按照先后顺序排序，允许有重复值
-         * ｜-------｜LinkedList接口实现类：底层是链表，适合删除和插入操作，线程不安全，没有同步
+         * ｜-------|LinkedList (非继承List接口，继承的是一个类)接口实现类：底层是链表，适合删除和插入操作，线程不安全，没有同步
+         *             public class LinkedList<E>
+         *                          extends AbstractSequentialList<E>
+         *                                  implements List<E>, Deque<E>, Cloneable, Serializable
          * ｜-------｜ArrayList接口实现类：底层是数组，适合查找操作，线程不安全，没有同步
+         *              public class ArrayList<E>
+         *                          extends AbstractList<E>
+         *                                  implements List<E>, RandomAccess, Cloneable, Serializable
          * ｜-------｜Vector接口实现类：底层是数组，适合查找操作，线程安全，同步，性能较差
          * ｜----Set接口：仅接受一次，不允许重复，并且内部自动排序
          * ｜-------｜HashSet：使用Hash表（数组）存储元素
