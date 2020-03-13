@@ -1,0 +1,45 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/index.jsp</welcome-file>
+  </welcome-file-list>
+  <!--   <context-param> 是代表整个web站点，可以通过ServletContext对象读取被每个Servlet获取到，而<init-param> 仅仅代表当前的Servlet，代表的是一个Servlet-->
+  <context-param>
+    <param-name>xuhj</param-name>
+    <param-value>xuhj</param-value>
+  </context-param>
+  <!-- 注册过的Servlet可以多次映射，你无论访问哪个url，都会请求到helloworld中来-->
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>com.xuhj.helloworld.HelloWorld</servlet-class>
+    <!--Servlet不是容器一旦启动就创建实例的，用到哪个就创建哪个实例，这个标签的意思就是容器启动完成后立刻创建该Servlet的实例-->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/hw</url-pattern>
+  </servlet-mapping>
+  <!--
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  -->
+  <servlet>
+    <servlet-name>HelloWorldExtend</servlet-name>
+    <servlet-class>com.xuhj.helloworld.HelloWorldExtend</servlet-class>
+
+    <init-param>
+      <param-name>xuhj</param-name>
+      <param-value>cntaiping</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorldExtend</servlet-name>
+    <url-pattern>/extend</url-pattern>
+  </servlet-mapping>
+</web-app>
