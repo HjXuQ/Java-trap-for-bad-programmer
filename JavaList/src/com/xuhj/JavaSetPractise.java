@@ -1,7 +1,9 @@
 package com.xuhj;
 
-import java.util.HashSet;
-import java.util.Iterator;
+import sun.awt.image.ImageWatched;
+
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class JavaSetPractise {
     /**
@@ -47,7 +49,7 @@ public class JavaSetPractise {
             System.out.println(iterator.next());//bac2 cab3 abc1 bac  cab  说明是无序的
         }
         //HashSet存储自定义对象元素
-        //如果我们往集合中存放自定义的对象，那么保证其唯一， 就必须复写hashCode和equals方法建立属于当前对象的比较方式。就是说要对哪些成员变量进行比较
+        //如果我们往集合中存放自定义的对象，那么保证其唯一， 就必须复写hashCode和equals方法建立属于当前对象的比较方式。就是说要对哪些成员变量进行比较，判断不同元素进行插入
         //你重写了hashCode和equals方法，判断插入元素的时候用到哪些字段进行校验判断，就是说我要插入一条数据，我要根据这几个属性来判断是否和以前插入的一样
         StudentBo s1 = new StudentBo("name1",12);
         StudentBo s2 = new StudentBo("name2",12);
@@ -58,12 +60,74 @@ public class JavaSetPractise {
         hashSetStudentBo.add(s3);
         for(StudentBo single : hashSetStudentBo){
             System.out.println(single.getName() + "----" + single.getAge());
+            //因为我重写了hasCode()方法和equals()方法，需要判断两个成员变量一起判断，所以说在age相同但是name不同的话，也是不同元素
             /**
              * name1----12
              * name2----12
              * name3----12
              * */
         }
+        //  LinkedHashSet
+        //Set集合保证元素是唯一的，但是里面的元素是无序的，我们想要有序，我们可以用其子类，LinkHashSet函数
+        Set<String> linkedHashSet = new LinkedHashSet<String>();
+        linkedHashSet.add("111");
+        linkedHashSet.add("222");
+        linkedHashSet.add("333");
+        Iterator it = linkedHashSet.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+            /**
+             * 111
+             * 222
+             * 333  说明是有序的
+             * */
+        }
+        String[] str = new String[]{"1","2","3","4"};
+        JavaSetPractise javaSetPractise = new JavaSetPractise();
+        javaSetPractise.getArray(str);
+        //Collections 的常用方法
+        /**
+         *   public static <T> boolean addAll(Collection<T> c, T... elements) :往集合中添加一些元素。
+         *   public static void shuffle(List<?> list) 打乱顺序 :打乱集合顺序。
+         *   public static <T> void sort(List<T> list) :将集合中元素按照默认规则排序。
+         *   public static <T> void sort(List<T> list，Comparator<? super T> ) :将集合中元素按照指定规则排
+         * */
+        ArrayList<Integer> intList = new ArrayList<Integer>();
+        //         *   public static <T> boolean addAll(Collection<T> c, T... elements) :往集合中添加一些元素。
+        Collections.addAll(intList,1,2,3,3,4,5);
+        //         *   public static void shuffle(List<?> list) 打乱顺序 :打乱集合顺序。
+        Collections.shuffle(intList);
+        for(Integer integer : intList){
+            System.out.println(integer);
+        }
+        //默认升序排序   *   public static <T> void sort(List<T> list) :将集合中元素按照默认规则排序。
+        Collections.sort(intList);
+        for(Integer integer : intList){
+            System.out.println(integer);
+        }
+        ArrayList<StudentBo> studentBos = new ArrayList<StudentBo>();
+        StudentBo studentBo1 = new StudentBo("name1",2);
+        StudentBo studentBo2 = new StudentBo("name1",1);
+        StudentBo studentBo3 = new StudentBo("name1",5);
+        StudentBo studentBo4 = new StudentBo("name1",0);
+        Collections.addAll(studentBos,studentBo1,studentBo2,studentBo3,studentBo4);
+        System.out.println(studentBos.size());
+        Collections.sort(studentBos, new Comparator<StudentBo>() {
+            @Override
+            public int compare(StudentBo o1, StudentBo o2) {
+                //升序排序
+                return o1.getAge() - o2.getAge();
+            }
+        });
+        for(int i =0 ;i<studentBos.size();i++){
+            System.out.println("我是第" + i + "个" + studentBos.get(i).getAge());
+        }
 
+    }
+    //可变参数的写法
+    public void getArray(String... args){
+        for (String s : args){
+            System.out.println(s);
+        }
     }
 }
