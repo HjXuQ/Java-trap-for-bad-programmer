@@ -4,7 +4,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ThreadPoolLambda{
+public class ThreadPool {
     /**
      * 等待唤醒机制
      * 线程间通信 概念:多个线程在处理同一个资源，但是处理的动作(线程的任务)却不相同。
