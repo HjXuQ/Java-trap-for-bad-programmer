@@ -1,10 +1,4 @@
-package com.xuhj;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+package com.xuhj.javaApi;
 
 public class SellThread {
     public static void main(String[] args) {

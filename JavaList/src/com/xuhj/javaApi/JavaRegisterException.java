@@ -1,4 +1,4 @@
-package com.xuhj;
+package com.xuhj.javaApi;
 
 public class JavaRegisterException extends Exception {
     public JavaRegisterException() {

@@ -1,6 +1,4 @@
-package com.xuhj;
-
-import sun.jvm.hotspot.gc_implementation.parallelScavenge.PSYoungGen;
+package com.xuhj.javaApi;
 
 public class baoziPuThread extends Thread {
     private Baozi baozi;

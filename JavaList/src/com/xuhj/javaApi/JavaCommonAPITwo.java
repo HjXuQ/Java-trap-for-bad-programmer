@@ -1,4 +1,4 @@
-package com.xuhj;
+package com.xuhj.javaApi;
 
 import java.util.Random;
 import java.util.Scanner;

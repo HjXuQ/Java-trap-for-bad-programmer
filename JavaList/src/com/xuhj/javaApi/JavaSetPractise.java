@@ -1,8 +1,5 @@
-package com.xuhj;
+package com.xuhj.javaApi;
 
-import sun.awt.image.ImageWatched;
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class JavaSetPractise {

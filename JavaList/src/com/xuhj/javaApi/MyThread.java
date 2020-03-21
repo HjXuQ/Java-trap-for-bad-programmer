@@ -1,4 +1,4 @@
-package com.xuhj;
+package com.xuhj.javaApi;
 
 public class MyThread extends Thread {
     //指定线程的名字

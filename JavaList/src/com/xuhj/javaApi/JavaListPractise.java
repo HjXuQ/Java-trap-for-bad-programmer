@@ -1,4 +1,4 @@
-package com.xuhj;
+package com.xuhj.javaApi;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

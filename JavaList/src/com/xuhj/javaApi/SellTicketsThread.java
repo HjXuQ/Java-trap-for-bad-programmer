@@ -1,4 +1,4 @@
-package com.xuhj;
+package com.xuhj.javaApi;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
