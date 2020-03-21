@@ -16,9 +16,11 @@ public class Teacher extends Employee {
     public void show(){
         System.out.println("父类" + super.num);
         System.out.println("子类" + this.num);
+        ziLei();
     }
 
     public static void main(String[] args) {
+
         Integer x1 = 10000;
         Integer x2 = 10000;
         if(x1 == x2){

@@ -24,7 +24,9 @@ public class Employee {
     public void setSex(String sex) {
         this.sex = sex;
     }
-
+    public void ziLei(){
+        System.out.println("yeap");
+    }
     public static void main(String[] args) throws UnsupportedEncodingException {
         String name = "徐华杰";
         //编码
@@ -33,4 +35,5 @@ public class Employee {
         String reName = new String(namexuhj,"ISO-8859-1");
         System.out.println(new String(reName.getBytes("ISO-8859-1"),"utf-8"));
     }
+
 }

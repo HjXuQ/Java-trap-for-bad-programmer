@@ -1,4 +1,4 @@
 package com.xuhj.classfeaturepractise;
 
-public class User {
+public class JavaFinallPra {
 }
