@@ -10,6 +10,30 @@ public class TestDuotai {
         Animals dog = new Dog();
         Cat cat1 = new Cat();
         Dog dog1 = new Dog();
+        Animals animals  = new Animals() {
+            @Override
+            public void show() {
+                System.out.println("aaa");
+            }
+
+            @Override
+            public void sayHello() {
+                System.out.println("bbb");
+            }
+        };
+        animals.sayHello();
+        animals.show();
+    dog1.sayHello1(new Animals() {
+        @Override
+        public void show() {
+            System.out.println("aaa");
+        }
+
+        @Override
+        public void sayHello() {
+            System.out.println("bbb");
+        }
+    });
         /**
          * 因为 在类加载的时候会创建一个类对象到内存
          * 而静态方法因为是static修饰的也是类加载的时候作为属性附到类对象上

@@ -8,4 +8,9 @@ public class Cat extends Animals {
     public void show() {
         System.out.println("我是cat");
     }
+
+    @Override
+    public void sayHello() {
+System.out.println("as");
+    }
 }
