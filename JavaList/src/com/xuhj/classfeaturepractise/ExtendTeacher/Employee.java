@@ -1,4 +1,4 @@
-package com.xuhj.classfeaturepractise;
+package com.xuhj.classfeaturepractise.ExtendTeacher;
 
 import java.io.UnsupportedEncodingException;
 

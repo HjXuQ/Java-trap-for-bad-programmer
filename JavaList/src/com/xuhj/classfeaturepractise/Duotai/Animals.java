@@ -1,4 +1,5 @@
 package com.xuhj.classfeaturepractise.Duotai;
 
-public class Animals {
+public abstract class Animals {
+    public abstract void show();
 }

@@ -1,6 +1,6 @@
-package com.xuhj.classfeaturepractise;
+package com.xuhj.classfeaturepractise.Extend;
 
-public  class Cat extends Animal{
+public  class Cat extends Animal {
     @Override
     public void run() {
         System.out.println("小猫傍地走");
@@ -12,6 +12,12 @@ public  class Cat extends Animal{
         System.out.println("cat show");
         System.out.println("------------");
     }
+
+    @Override
+    public void sayHello() {
+
+    }
+
     public void go(){
         show();
     }
@@ -21,6 +27,7 @@ public  class Cat extends Animal{
         cat.go();
         cat.run();
         cat.show();
+        Animal.name();
 
     }
 }

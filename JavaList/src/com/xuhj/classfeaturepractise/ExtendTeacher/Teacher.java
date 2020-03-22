@@ -1,8 +1,7 @@
-package com.xuhj.classfeaturepractise;
+package com.xuhj.classfeaturepractise.ExtendTeacher;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Teacher extends Employee {
     int numZi = 6;

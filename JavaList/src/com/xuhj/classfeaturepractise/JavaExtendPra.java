@@ -1,8 +1,8 @@
 package com.xuhj.classfeaturepractise;
 
-public class JavaExtend {
+public class JavaExtendPra {
     /**
-     * 继承由来
+     * 继承由来,static和private都不能被子类继承
      * 多个类中存在相同属性和行为时，将这些内容抽取到单独一个类中，那么多个类无需再定义这些属性和行为，只要 继承那一个类即可。
      * 继承:就是子类继承父类的属性和行为，使得子类对象具有与父类相同的属性、相同的行为。子类可以直接 访问父类中的非私有的属性和行为。
      * 好处

@@ -1,4 +1,4 @@
-package com.xuhj.classfeaturepractise;
+package com.xuhj.classfeaturepractise.luckyMoney;
 
 import java.util.ArrayList;
 import java.util.List;
