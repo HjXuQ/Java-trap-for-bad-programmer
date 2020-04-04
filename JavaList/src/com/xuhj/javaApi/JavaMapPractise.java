@@ -51,8 +51,9 @@ public class JavaMapPractise {
         studentBoStringHashMap.put(new StudentBo("xuhj5",27),"xuhj55");
         studentBoStringHashMap.put(new StudentBo("xuhj6",28),"xuhj66");
         studentBoStringHashMap.put(new StudentBo("xuhj7",29),"xuhj77");
-        System.out.println(studentBoStringHashMap.size());
+        System.out.println("地址-----------" + studentBoStringHashMap);
         //第一种遍历方式 keySet()
+        //不要用这种写法
         Set<StudentBo> stuKeySet = studentBoStringHashMap.keySet();
         for(StudentBo stuSingle : stuKeySet){
             System.out.println(stuSingle.getAge() + stuSingle.getName() + studentBoStringHashMap.get(stuSingle));

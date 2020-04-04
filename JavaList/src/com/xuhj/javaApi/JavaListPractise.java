@@ -5,6 +5,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class JavaListPractise {
+    @Override
+    public String toString() {
+        return "JavaListPractise{}" + super.toString();
+    }
+
     /**
      *  List作为Collection的子接口，除了Collection的故有接口，List还定义了自己特色API
      *  public void add(int index,E element ) 往特定的索引上添加特定的元素
@@ -12,6 +17,7 @@ public class JavaListPractise {
      *  public E remove(int index) 移除集合中指定索引处的元素，返回的是移除的value值
      *  public E set(int index,E element) 用指定的元素去替换指定元素的位置，返回的是替换前的元素
      * */
+
     public static void main(String[] args) {
         /**
          * ArrayList<>集合
@@ -22,7 +28,10 @@ public class JavaListPractise {
         praList.add("33");
         //*  public void add(int index,E element ) 往特定的索引上添加特定的元素,直接扩充，该位置及其往后的元素都往后移动
         praList.add(1,"44");//4
-        System.out.println(praList.size());
+        for(String a : praList){
+            System.out.println(a);
+        }
+        System.out.println("地址-----------" + praList);//[11, 44, 22, 33]自动调用toString()方法，
         for(String s : praList){
             System.out.println(s); //11  44  22  33
         }
@@ -89,7 +98,7 @@ public class JavaListPractise {
         System.out.println("pop---1" + popEle);
         String popEle2 = linkedList.pop();
         System.out.println("pop---2" + popEle2);
-        //         *      public E push() 从此列表所表示的堆栈中添加一个元素,push进去的在栈顶
+        //         *      public E push() 从此列表所表示的堆栈中添加一个元素,push进去的在栈顶，链头在栈顶
         linkedList.push("我是新加的");
         linkedList.push("我是新加的2");
         linkedList.push("我是新加的3");
